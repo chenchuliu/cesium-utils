@@ -7,6 +7,10 @@ import router from './router'
 import 'element-plus/dist/index.css'
 import './assets/main.css'
 
+Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
+  value: import.meta.env.VITE_CESIUM_BASE_URL
+})
+
 const app = createApp(App)
 
 app.use(createPinia())
